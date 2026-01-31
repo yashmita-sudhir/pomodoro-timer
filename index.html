@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pomodoro App</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=EG+Garamond:wght@400;500;600;700&family=Fira+Sans:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <body>
+
+    <!-- Live background canvas -->
+    <canvas id="bg"></canvas>
+
+    <div class="app-container">
+      <h1>pomodoro</h1>
+
+      <div class="app-message">press start to begin</div>
+
+      <!-- TIMER CIRCLE -->
+      <div class="app-circle">
+
+        <!-- SVG PROGRESS RING -->
+        <svg width="260" height="260">
+          <circle class="bg-ring" cx="130" cy="130" r="120"></circle>
+          <circle class="progress-ring" cx="130" cy="130" r="120"></circle>
+        </svg>
+
+        <!-- CENTERED TIMER (CONNECTED TO JS) -->
+        <div class="app-time">
+          <span class="minutes">25</span>:<span class="seconds">00</span>
+        </div>
+
+        <!-- START BUTTON -->
+        <button class="btn-start">start</button>
+        <button id="sound-toggle">sound on</button>
+
+
+      </div>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
